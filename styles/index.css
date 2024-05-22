@@ -1,0 +1,79 @@
+.header-box {
+  border-bottom: 1px solid red;
+}
+
+.header-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  margin: 0;
+}
+
+.title {
+  margin: 0;
+}
+
+.itemsList {
+  list-style: circle;
+  padding: 0;
+}
+
+.taskItemBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 5px 0;
+}
+
+.contentBoxItem {
+  width: 80%;
+}
+
+.taskButtonsBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 54px;
+}
+
+.removeButton {
+  padding: 3px 8px;
+  background-color: transparent;
+  border: 1px solid red;
+  border-radius: 50%;
+  color: red;
+  cursor: pointer;
+}
+
+.inputChecked {
+  display: none;
+}
+
+.inputChecked + .custom-checkbox {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: 1px solid rgb(2, 196, 2);
+  border-radius: 3px;
+  position: relative;
+  cursor: pointer;
+}
+
+.inputChecked + .custom-checkbox::before {
+  content: "";
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: green;
+  display: none;
+}
+
+.inputChecked:checked + .custom-checkbox::before {
+  display: block;
+}
