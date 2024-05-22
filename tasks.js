@@ -4,9 +4,28 @@ const items = JSON.parse(localStorage.getItem("items")) || [];
 const toggleTheme = document.getElementById("darksun");
 const body = document.querySelector("body");
 
+function applySavedTheme() {
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "dark") {
+    body.classList.add("active");
+    toggleTheme.classList.add("active");
+  } else {
+    body.classList.remove("active");
+    toggleTheme.classList.remove("active");
+  }
+}
+
+applySavedTheme();
+
 toggleTheme.onclick = function () {
   toggleTheme.classList.toggle("active");
-  body.classList.toggle("active");
+  const isActive = body.classList.toggle("active");
+
+  if (isActive) {
+    localStorage.setItem("theme", "dark");
+  } else {
+    localStorage.setItem("theme", "light");
+  }
 };
 
 function addItem(e) {
