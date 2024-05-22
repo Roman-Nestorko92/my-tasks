@@ -19,33 +19,41 @@
           <h1 class="title">My tasks</h1>
         </li>
         <li>
-          <button type="button">dark/sun</button>
+          <div id="darksun">
+            <i class="indicator"></i>
+          </div>
         </li>
       </ul>
     </div>
-    <div class="takss-box">
-      <h3>my-tasks:</h3>
-      <ul
-        class="itemsList"
-        id="taskList"
-      >
-        <li>download my tasks...</li>
-      </ul>
+    <div class="taskBody">
+      <div class="takss-box">
+        <h3>my-tasks:</h3>
+        <ul
+          class="itemsList"
+          id="taskList"
+        >
+          <li>download my tasks...</li>
+        </ul>
+      </div>
+      <form id="itemsForm">
+        <div class="formBox">
+          <input
+            type="text"
+            name="item"
+            id="newTask"
+            autocomplete="off"
+            placeholder="new task"
+            class="fieldforTask"
+            required
+          />
+          <input
+            type="submit"
+            value="task +"
+            class="buttonAdd"
+          />
+        </div>
+      </form>
+      <script src="tasks.js"></script>
     </div>
-    <form id="itemsForm">
-      <input
-        type="text"
-        name="item"
-        id="newTask"
-        autocomplete="off"
-        placeholder="new task"
-        required
-      />
-      <input
-        type="submit"
-        value="task +"
-      />
-    </form>
-    <script src="tasks.js"></script>
   </body>
 </html>

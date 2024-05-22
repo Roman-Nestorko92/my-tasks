@@ -1,6 +1,13 @@
 const addItemsForm = document.getElementById("itemsForm");
 const itemsList = document.getElementById("taskList");
 const items = JSON.parse(localStorage.getItem("items")) || [];
+const toggleTheme = document.getElementById("darksun");
+const body = document.querySelector("body");
+
+toggleTheme.onclick = function () {
+  toggleTheme.classList.toggle("active");
+  body.classList.toggle("active");
+};
 
 function addItem(e) {
   e.preventDefault();

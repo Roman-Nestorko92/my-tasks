@@ -1,3 +1,13 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: whitesmoke;
+  transition: 0.5s;
+}
+
+body.active {
+  background-color: #5a5a5a;
+}
+
 .header-box {
   border-bottom: 1px solid red;
 }
@@ -13,6 +23,87 @@
 
 .title {
   margin: 0;
+}
+
+#darksun {
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 25px;
+  border-radius: 25px;
+  background: #222;
+  transition: 0.5s;
+  cursor: pointer;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.1),
+    inset 0 2px 2px rgba(0, 0, 0, 0.1), inset 0 -4px 4px rgba(0, 0, 0, 0.1);
+}
+
+#darksun.active {
+  background: whitesmoke;
+}
+
+#darksun .indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25px;
+  height: 25px;
+  background: linear-gradient(#5a5a5a, #222);
+  border-radius: 50%;
+  transform: scale(0.9);
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.5),
+    inset 0 4px -4px rgba(199, 198, 198, 0.2),
+    inset 0 4px -4px rgba(255, 255, 255, 0.2);
+  transition: 0.5s;
+}
+
+#darksun.active .indicator {
+  left: 25px;
+  background: linear-gradient(#949393, #f9f9f9);
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1),
+    inset 0 4px -4px rgba(199, 198, 198, 0.5),
+    inset 0 4px -4px rgba(255, 255, 255, 1);
+}
+
+.taskBody {
+  @media screen and (min-width: 728px) {
+    margin: 0 auto;
+    width: 600px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin: 0 auto;
+    width: 900px;
+  }
+}
+
+.task-number {
+  color: brown;
+  font-weight: 600;
+}
+
+.formBox {
+  max-width: 250px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fieldforTask {
+  background-color: transparent;
+  border: 2px solid grey;
+
+  height: 20px;
+}
+
+.buttonAdd {
+  border: 1px solid grey;
+  background-color: transparent;
+  color: #212121;
+  padding: 4px 12px;
+  font-weight: 600;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .itemsList {
