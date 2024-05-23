@@ -25,6 +25,14 @@ body.active {
   margin: 0;
 }
 
+#title.active {
+  color: rgb(236, 234, 234);
+}
+
+#titleList.active {
+  color: rgb(236, 234, 234);
+}
+
 #darksun {
   position: relative;
   display: block;
@@ -78,8 +86,12 @@ body.active {
 }
 
 .task-number {
-  color: brown;
+  color: rgb(248, 242, 242);
   font-weight: 600;
+}
+
+.task-number.active {
+  color: brown;
 }
 
 .formBox {
@@ -88,6 +100,14 @@ body.active {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.taskItemContent {
+  color: rgb(236, 234, 234);
+}
+
+.taskItemContent.active {
+  color: #212121;
 }
 
 .fieldforTask {
@@ -106,9 +126,19 @@ body.active {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
+#buttonAdd.active {
+  color: #f9f9f9;
+  border: 1px solid #f9f9f9;
+}
+
 .itemsList {
   list-style: circle;
   padding: 0;
+}
+
+#newTask.active {
+  color: #f9f9f9;
+  border: 1px solid #f9f9f9;
 }
 
 .taskItemBox {
@@ -161,8 +191,12 @@ body.active {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: green;
+  background-color: rgb(40, 243, 40);
   display: none;
+}
+
+.inputChecked.active + .custom-checkbox::before {
+  background-color: green;
 }
 
 .inputChecked:checked + .custom-checkbox::before {
