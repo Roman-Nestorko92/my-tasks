@@ -86,11 +86,6 @@ body.active {
 }
 
 .task-number {
-  color: rgb(248, 242, 242);
-  font-weight: 600;
-}
-
-.task-number.active {
   color: brown;
 }
 
@@ -103,11 +98,12 @@ body.active {
 }
 
 .taskItemContent {
-  color: rgb(236, 234, 234);
+  color: #212121;
 }
 
-.taskItemContent.active {
-  color: #212121;
+.taskItemContent.active,
+.task-number.active {
+  color: rgb(236, 234, 234);
 }
 
 .fieldforTask {
