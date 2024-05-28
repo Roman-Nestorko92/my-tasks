@@ -9,7 +9,7 @@ body.active {
 }
 
 .header-box {
-  border-bottom: 1px solid red;
+  border-bottom: 1px solid aqua;
 }
 
 .header-list {
@@ -23,6 +23,7 @@ body.active {
 
 .title {
   margin: 0;
+  font-family: "Times New Roman", Times, serif;
 }
 
 #title.active {
@@ -108,23 +109,17 @@ body.active {
 
 .fieldforTask {
   background-color: transparent;
-  border: 2px solid grey;
+  border: 1px solid aqua;
 
   height: 20px;
 }
 
 .buttonAdd {
-  border: 1px solid grey;
-  background-color: transparent;
+  padding: 4px 16px;
+  border-radius: 3px;
+  border: 1px solid aqua;
   color: #212121;
-  padding: 4px 12px;
-  font-weight: 600;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-}
-
-#buttonAdd.active {
-  color: #f9f9f9;
-  border: 1px solid #f9f9f9;
+  cursor: pointer;
 }
 
 .itemsList {

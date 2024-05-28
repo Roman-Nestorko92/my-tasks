@@ -91,9 +91,11 @@ function addItem(e) {
     text: taskText,
     checked: false,
   };
+
   items.push(item);
   localStorage.setItem("items", JSON.stringify(items));
   displayItems(items, itemsList);
+
   this.reset();
 }
 
@@ -109,7 +111,8 @@ function displayItems(tasks, taskList) {
       return `<li class="taskItemBox">
       <div class="contentBoxItem">
       <span class="task-number">${index + 1}.</span>
-      <label class="taskItemContent" for="item${index}">${task.text}</label>
+      <label class="taskItemContent" for="item${index}">${task.text}</label>  
+      
       </div>
       <div class="taskButtonsBox">      
       <input class="inputChecked" type="checkbox" id="item${index}" data-index="${index}" ${
