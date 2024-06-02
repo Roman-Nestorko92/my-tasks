@@ -21,6 +21,31 @@ body.active {
   margin: 0;
 }
 
+.itemsForm {
+  margin: 0;
+  padding: 0;
+}
+
+.fieldforTask {
+  background-color: transparent;
+  border: 1px solid aqua;
+  height: 20px;
+}
+
+.buttonAdd {
+  padding: 4px 16px;
+  border-radius: 3px;
+  border: 1px solid aqua;
+  color: #212121;
+  cursor: pointer;
+}
+
+.openModal {
+  border: 1px solid aqua;
+  color: #212121;
+  border-radius: 3px;
+}
+
 .title {
   margin: 0;
   font-family: "Times New Roman", Times, serif;
@@ -107,21 +132,6 @@ body.active {
   color: rgb(236, 234, 234);
 }
 
-.fieldforTask {
-  background-color: transparent;
-  border: 1px solid aqua;
-
-  height: 20px;
-}
-
-.buttonAdd {
-  padding: 4px 16px;
-  border-radius: 3px;
-  border: 1px solid aqua;
-  color: #212121;
-  cursor: pointer;
-}
-
 .itemsList {
   list-style: circle;
   padding: 0;
@@ -192,4 +202,32 @@ body.active {
 
 .inputChecked:checked + .custom-checkbox::before {
   display: block;
+}
+
+.modalBox {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modalContent {
+  background-color: #fefefe;
+  margin: 70% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.closeModal {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
 }

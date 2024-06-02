@@ -2,12 +2,29 @@ const addItemsForm = document.getElementById("itemsForm");
 const itemsList = document.getElementById("taskList");
 const items = JSON.parse(localStorage.getItem("items")) || [];
 const toggleTheme = document.getElementById("darksun");
+const openModal = document.getElementById("openModal");
+const modalBox = document.getElementById("modalBox");
+const closeModal = document.getElementById("closeModal");
 
 const body = document.querySelector("body");
 const titleh1 = document.getElementById("title");
 const titleList = document.getElementById("titleList");
 const buttonAdd = document.getElementById("buttonAdd");
 const newTaskField = document.getElementById("newTask");
+
+openModal.onclick = function () {
+  modalBox.style.display = "block";
+};
+
+closeModal.onclick = function () {
+  modalBox.style.display = "none";
+};
+
+window.onclick = function (e) {
+  if (e.target === modalBox) {
+    modalBox.style.display = "none";
+  }
+};
 
 function applySavedTheme() {
   const savedTheme = localStorage.getItem("theme");
@@ -97,6 +114,7 @@ function addItem(e) {
   displayItems(items, itemsList);
 
   this.reset();
+  modalBox.style.display = "none";
 }
 
 function removeFromList(idx) {

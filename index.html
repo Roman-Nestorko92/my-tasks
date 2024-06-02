@@ -49,25 +49,51 @@
           <li>download my tasks...</li>
         </ul>
       </div>
-      <form id="itemsForm">
-        <div class="formBox">
-          <input
-            type="text"
-            name="item"
-            id="newTask"
-            autocomplete="off"
-            placeholder="new task"
-            class="fieldforTask"
-            required
-          />
-          <input
-            type="submit"
-            value="task +"
-            class="buttonAdd"
-            id="buttonAdd"
-          />
-        </div>
-      </form>
+    </div>
+    <button
+      type="button"
+      id="openModal"
+      class="openModal"
+    >
+      add task
+    </button>
+    <div
+      id="modalBox"
+      class="modalBox"
+    >
+      <div
+        id="modalContent"
+        class="modalContent"
+      >
+        <span
+          class="closeModal"
+          id="closeModal"
+          >&times;</span
+        >
+        <p>Add your new task!</p>
+        <form
+          id="itemsForm"
+          class="itemsForm"
+        >
+          <div class="formBox">
+            <input
+              type="text"
+              name="item"
+              id="newTask"
+              autocomplete="off"
+              placeholder="new task"
+              class="fieldforTask"
+              required
+            />
+            <input
+              type="submit"
+              value="task +"
+              class="buttonAdd"
+              id="buttonAdd"
+            />
+          </div>
+        </form>
+      </div>
     </div>
     <script src="tasks.js"></script>
   </body>
