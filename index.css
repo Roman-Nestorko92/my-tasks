@@ -223,6 +223,14 @@ body.active {
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
+
+  @media screen and (min-width: 490px) {
+    margin: 50% auto;
+  }
+
+  @media screen and (min-width: 900px) {
+    margin: 20% auto;
+  }
 }
 
 .closeModal {
